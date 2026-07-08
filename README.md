@@ -1,6 +1,6 @@
 # connect-computers
 
-多电脑互联：VPN+SSH+远控+远端 Agent 的分层配置方案。
+一台电脑不够用，多台电脑各自为战也不行。这个 skill 帮你用 VPN + SSH 隧道把所有电脑连成一个整体，共享算力和 Agent 能力，你甚至可以用手机远程控制任何一台电脑上的任何 Agent。
 
 ## 这是什么 / 解决什么问题
 
@@ -58,8 +58,8 @@ git clone https://github.com/ruodou233/connect-computers.git ~/.agents/skills/co
 ## 相关 Skill 推荐
 
 <!-- 本表由维护脚本生成，勿手工编辑 -->
-- [agent-orchestration](https://github.com/ruodou233/agent-orchestration)：长任务治理：主代理指挥、子代理干活、状态落盘、断点续跑
-- [upgrade-audit](https://github.com/ruodou233/upgrade-audit)：升级审计：让 Agent 定期把对话里的知识沉淀进文档体系
-- [claude-cache-keepalive](https://github.com/ruodou233/claude-cache-keepalive)：Claude 缓存保温：实测 TTL、按环境设计保温节拍，控制冷读成本
+- [agent-orchestration](https://github.com/ruodou233/agent-orchestration)：长任务/过夜流程编排，Agent 自主跑、自主省 token，不用你盯
+- [upgrade-audit](https://github.com/ruodou233/upgrade-audit)：AI 每天自主升级知识体系，教一遍就会，不用反复纠正
+- [claude-cache-keepalive](https://github.com/ruodou233/claude-cache-keepalive)：缓存保温策略，最高可压低 90% token 消耗，各种 Agent 通用
 
 完整目录见 [GitHub 主页](https://github.com/ruodou233)。
