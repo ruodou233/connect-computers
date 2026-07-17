@@ -24,6 +24,7 @@ description: >
 2. 命令层：每台电脑开启 SSH，配置固定别名和密钥登录。Windows 可用 OpenSSH Server，macOS 开启 Remote Login。
 3. 屏幕层：优先 RustDesk 或系统远程桌面/屏幕共享；只在需要画面时使用。远程桌面不是命令层的替代品。
 4. Agent 层：每台机器独立安装 Codex/Claude CLI，复制非密钥配置，重新登录账号，验证版本和登录状态。
+   - 远端执行通道有三条，按需选择：① Claude Remote Control（claude.ai/code 或手机驱动远端已登录会话，research preview）；② 桌面端 SSH Remote（IDE/桌面应用连远端主机）；③ SSH + `codex exec` / `claude -p`（脚本化远程执行）。其上可选 Agent 间委派作为编排层（入口所有者跨机派工，底层复用上述通道）。远端 GUI 注册、Tailscale 登录态、host key 信任等环节未经端到端验证时只写能力边界，不得宣称"已可用"。
 5. 手机层：手机安装同一套 VPN/远控客户端；手机控制电脑主要依赖远控工具，不承担长期自动化。
 6. 供电层：如果要求随时可操作，关闭自动睡眠，只让显示器快速关闭；如必须睡眠，再单独配置和实测 Wake-on-LAN。
 
