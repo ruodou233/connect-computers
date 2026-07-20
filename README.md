@@ -40,10 +40,15 @@ git clone https://github.com/ruodou233/connect-computers.git ~/.agents/skills/co
 
 首次触发时，Agent 应只读盘点设备数量、系统、连接方式、是否需要远程屏幕、是否需要远端 Agent，并按设备数量选择方案：1 台无需本 skill，2 台使用最小 SSH + VPN，3 台以上使用完整分层方案并补齐供电策略。真实设备清单经使用者同意后写入 `~/.config/agentops-skills/connect-computers/local-config.md`；无法写该路径时退回 skill 目录内 `local-config.md`；两处都不可写时，本次会话内直接使用盘点结果并提示手动保存。
 
+## 运维方法论
+
+首次配置只是起点。多机长期协作中沉淀的分层思路、无头屏幕方案选择顺序、设备验收清单和配置同步安全边界，见 [operations.md](./operations.md)。
+
 ## Changelog
 
 | 时间 | 变更 |
 |---|---|
+| 2026-07 | 补充多机长期运维方法论 operations.md |
 | 2026-07 | 首次开源发布 |
 
 ## 反馈与作者
