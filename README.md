@@ -1,10 +1,14 @@
 # connect-computers
 
-一台电脑不够用，多台电脑各自为战也不行。这个 skill 帮你用 VPN + SSH 隧道把所有电脑连成一个整体，共享算力和 Agent 能力，你甚至可以用手机远程控制任何一台电脑上的任何 Agent。
+一台电脑不够用，多台电脑各自为战也不行。这个 skill 帮你把家里的台式机、随身的笔记本和其他电脑连成一个工作网络：从一台机器执行另一台的命令，调用远端 Agent，需要时看屏幕，出门也能接着用。先盘点你有什么设备、想怎么用，再把网络、SSH、远控和供电一起配好。
 
-## 这是什么 / 解决什么问题
+## 连起来以后可以干什么
 
-当你有两台以上电脑，问题往往不是“装一个远控软件”就结束：命令执行、屏幕查看、远端 Agent、手机访问和供电策略是不同层的问题。这个 skill 帮你的 Agent 先盘点设备，再按设备数量选择最小可行方案或完整分层方案。它强调 SSH 和 VPN 作为稳定入口，远程屏幕只在需要画面时使用。真实设备清单、账号、IP、SSH alias 和远控 ID 只进入本地配置，不进入可分享文档。
+- **笔记本借用台式机干活**：“我在笔记本上写东西，想把重任务交给家里的电脑。”先打通 SSH，让命令能到、结果能拿回来。
+- **出门继续用自己的电脑**：“帮我把两台电脑连起来，离家也能 SSH 上去。”配好 VPN 入口，在外面也能找到那台机器。
+- **几台电脑一起跑 Agent**：“我有三台电脑，想让远端也能跑 Agent，还能看屏幕。”把命令、Agent 和画面分别接通，不用来回搬电脑。
+- **手机临时接手**：“我不带电脑时，也想用手机连上家里的工作环境。”按远端 Agent 和手机条件选入口。
+- **机器随时能用，屏幕不用常亮**：“电脑屏幕别亮，但我希望随时能远程操作。”把显示器关闭和主机休眠分开设置，再实测唤醒是否可用。
 
 ## 核心功能/亮点
 
@@ -29,12 +33,6 @@ git clone https://github.com/ruodou233/connect-computers.git ~/.agents/skills/co
 ```
 
 其他支持 SKILL.md 的平台：放入其 skills 目录即可。
-
-## 使用示例
-
-- “帮我把两台电脑连起来，离家也能 SSH 上去。”预期行为：先只读盘点两台设备，再给出最小 SSH + VPN 方案和验收步骤。
-- “我有三台电脑，想让远端也能跑 Agent，还能看屏幕。”预期行为：按网络、命令、屏幕、Agent、供电分层设计，并提醒真实设备清单只写本地配置。
-- “电脑屏幕别亮，但我希望随时能远程操作。”预期行为：优先建议关闭显示器但不让主机睡眠，再讨论是否需要 Wake-on-LAN 备用。
 
 ## 首次使用：环境自适应
 
@@ -63,8 +61,8 @@ git clone https://github.com/ruodou233/connect-computers.git ~/.agents/skills/co
 ## 相关 Skill 推荐
 
 <!-- 本表由维护脚本生成，勿手工编辑 -->
-- [agent-orchestration](https://github.com/ruodou233/agent-orchestration)：长任务/过夜流程编排，Agent 自主跑、自主省 token，不用你盯
-- [upgrade-audit](https://github.com/ruodou233/upgrade-audit)：AI 每天自主升级知识体系，教一遍就会，不用反复纠正
-- [claude-cache-keepalive](https://github.com/ruodou233/claude-cache-keepalive)：缓存保温策略，最高可压低 90% token 消耗，各种 Agent 通用
+- [agent-orchestration](https://github.com/ruodou233/agent-orchestration)：长任务不用一直盯着：批量调研、读长文、做产物，让 Agent 分工接着干
+- [upgrade-audit](https://github.com/ruodou233/upgrade-audit)：把你教过 AI 的东西留下来：沉淀偏好、复盘踩坑、更新 skill 和工作流程
+- [claude-cache-keepalive](https://github.com/ruodou233/claude-cache-keepalive)：缓存保温：实测命中、算清收益，让长会话少花冤枉 token
 
 完整目录见 [GitHub 主页](https://github.com/ruodou233)。
