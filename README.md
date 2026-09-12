@@ -1,4 +1,6 @@
-# connect-computers
+# 多电脑互联与远程访问｜Multi-Computer Setup & Remote Access
+
+Set up SSH, VPN, remote desktop access, and remote AI agents across your computers for work at home and on the go.
 
 一台电脑不够用，多台电脑各自为战也不行。这个 skill 帮你把家里的台式机、随身的笔记本和其他电脑连成一个工作网络：从一台机器执行另一台的命令，调用远端 Agent，需要时看屏幕，出门也能接着用。先盘点你有什么设备、想怎么用，再把网络、SSH、远控和供电一起配好。
 
@@ -61,8 +63,8 @@ git clone https://github.com/ruodou233/connect-computers.git ~/.agents/skills/co
 ## 相关 Skill 推荐
 
 <!-- 本表由维护脚本生成，勿手工编辑 -->
-- [agent-orchestration](https://github.com/ruodou233/agent-orchestration)：复杂任务跑到半夜，你不可能一直盯着。让 Agent 分工跑长任务和批量工作，你只管第二天早上收结果。
-- [upgrade-audit](https://github.com/ruodou233/upgrade-audit)：把你教过 AI 的东西留下来：沉淀偏好、复盘踩坑、更新 skill 和工作流程
-- [claude-cache-keepalive](https://github.com/ruodou233/claude-cache-keepalive)：缓存保温：实测命中、算清收益，让长会话少花冤枉 token
+- [agent-orchestration](https://github.com/ruodou233/agent-orchestration)：复杂任务跑到半夜，你不可能一直盯着。让 Agent 分工跑长任务和批量工作，你只管第二天早上收结果。<br>Coordinate AI agents for long-running tasks, parallel work, and overnight workflows.
+- [upgrade-audit](https://github.com/ruodou233/upgrade-audit)：把你教过 AI 的东西留下来：沉淀偏好、复盘踩坑、更新 skill 和工作流程<br>Review conversation history, agent memory, and skills to identify reusable lessons and propose updates to outdated instructions.
+- [claude-cache-keepalive](https://github.com/ruodou233/claude-cache-keepalive)：缓存保温：实测命中、算清收益，让长会话少花冤枉 token<br>Measure prompt cache hits and costs, then configure automatic keepalive when the savings justify it.
 
 完整目录见 [GitHub 主页](https://github.com/ruodou233)。
