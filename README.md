@@ -15,7 +15,7 @@ Set up SSH, VPN, remote desktop access, and remote AI agents across your compute
 ## 核心功能/亮点
 
 - 把网络层、命令层、屏幕层、Agent 层、手机层、供电层分开设计和验收。
-- 2 台设备走最小 SSH + VPN，3 台以上走完整分层方案。
+- 先打通内网 SSH 和 VPN SSH 两条命令入口，再按需要叠加屏幕、远端 Agent 和供电策略。
 - 明确哪些信息不能复制或公开：密钥、token、session、浏览器 Cookie、真实设备清单。
 - 将 Wake-on-LAN 视为需实测的备用能力，而不是可靠性的默认前提。
 - 提供 `local-config.example.md`，方便把真实设备清单隔离在本地。
@@ -36,9 +36,9 @@ git clone https://github.com/ruodou233/connect-computers.git ~/.agents/skills/co
 
 其他支持 SKILL.md 的平台：放入其 skills 目录即可。
 
-## 首次使用：环境自适应
+## 首次使用
 
-首次触发时，Agent 应只读盘点设备数量、系统、连接方式、是否需要远程屏幕、是否需要远端 Agent，并按设备数量选择方案：1 台无需本 skill，2 台使用最小 SSH + VPN，3 台以上使用完整分层方案并补齐供电策略。真实设备清单经使用者同意后写入 `~/.config/agentops-skills/connect-computers/local-config.md`；无法写该路径时退回 skill 目录内 `local-config.md`；两处都不可写时，本次会话内直接使用盘点结果并提示手动保存。
+Agent 会先只读盘点你的设备、系统、连接方式，以及是否需要远程屏幕和远端 Agent，再从两条命令入口起步逐层配置、逐层实测。真实设备清单只在你同意后写到本地（读取位置和字段见 `local-config.example.md`），不会进入可分享文件。
 
 ## 运维方法论
 

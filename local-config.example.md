@@ -6,7 +6,7 @@
 
 1. `~/.config/agentops-skills/connect-computers/local-config.md`
 2. skill 目录内 `local-config.md`
-3. 无本地配置时，按 `SKILL.md` 的首次使用流程重新只读盘点
+3. 无本地配置时，按 `SKILL.md` 执行流程第 1 步重新只读盘点
 
 填写前，Agent 应先只读盘点设备；写入本文件或等价本地配置前，必须向使用者说明写入位置和内容，并取得明确同意。
 
