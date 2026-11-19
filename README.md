@@ -62,7 +62,6 @@ Agent 会先只读盘点你的设备、系统、连接方式，以及是否需�
 
 ## 相关 Skill 推荐
 
-<!-- 本表由维护脚本生成，勿手工编辑 -->
 - [agent-orchestration](https://github.com/ruodou233/agent-orchestration)：复杂任务跑到半夜，你不可能一直盯着。让 Agent 分工跑长任务和批量工作，你只管第二天早上收结果。<br>Coordinate AI agents for long-running tasks, parallel work, and overnight workflows.
 - [upgrade-audit](https://github.com/ruodou233/upgrade-audit)：把你教过 AI 的东西留下来：沉淀偏好、复盘踩坑、更新 skill 和工作流程<br>Review conversation history, agent memory, and skills to identify reusable lessons and propose updates to outdated instructions.
 
